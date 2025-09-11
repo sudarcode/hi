@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "env": { "browser": true, "node": true, "es6": true },
+  "extends": ["plugin:vue/recommended", "eslint:recommended"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "requireConfigFile": false,
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "globals": { "process": "readonly" },
+  "rules": {
+    // ↓ Jangan pakai "ignoreNames" karena tidak didukung
+    "vue/no-reserved-component-names": ["warn", {
+      "disallowVueBuiltInComponents": true,
+      "disallowVue3BuiltInComponents": true,
+      "htmlElementCaseSensitive": true
+    }],
+    // Boleh whitelist komponen single-word di sini
+    "vue/multi-word-component-names": ["warn", {
+      "ignores": [
+        "Home","About","Contacts","Projects","Skills","Watch",
+        "Content","Footer","Header","Section",
+        "Glitch","Highlight","Scroller","Typer","Navbar"
+      ]
+    }],
+    "vue/no-unused-components": "warn"
+  }
+}
