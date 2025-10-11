@@ -13,7 +13,7 @@
       erase-style="backspace"
       :erase-on-complete="false"
       caret-animation="smooth"
-    ></vue-typer>
+    />
   </div>
 </template>
 

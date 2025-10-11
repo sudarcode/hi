@@ -1,6 +1,10 @@
 <template>
   <div class="text-gray-300 bg-yellow-30">
-    <section-title :title="'404'" :subYellow="'page'" :subGray="' not found'" />
+    <section-title
+      :title="'404'"
+      :sub-yellow="'page'"
+      :sub-gray="' not found'"
+    />
   </div>
 </template>
 

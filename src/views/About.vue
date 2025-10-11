@@ -3,20 +3,32 @@
     <SectionTitle
       v-if="title.text != ''"
       :title="title.text"
-      :subYellow="title.sub_primary"
-      :subGray="title.sub_secondary"
+      :sub-yellow="title.sub_primary"
+      :sub-gray="title.sub_secondary"
     />
     <Scroller :to="'#detail-about'" />
-    <div id="detail-about" class="flex items-center justify-center h-screen">
+    <div
+      id="detail-about"
+      class="flex items-center justify-center h-screen"
+    >
       <Section
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
+        <SectionBody
+          :body="body[0]"
+          :highlights="highlights"
+        />
         <ButtonCv v-if="title.text && showResumeButton" />
-        <NavGuide v-if="title.text" :to="'/skills'" :delay="800">skills</NavGuide>
+        <NavGuide
+          v-if="title.text"
+          :to="'/skills'"
+          :delay="800"
+        >
+          skills
+        </NavGuide>
       </Section>
     </div>
   </div>

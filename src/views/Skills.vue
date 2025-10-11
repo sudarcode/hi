@@ -3,20 +3,26 @@
     <SectionTitle
       v-if="title.text != ''"
       :title="title.text"
-      :subYellow="title.sub_primary"
-      :subGray="title.sub_secondary"
+      :sub-yellow="title.sub_primary"
+      :sub-gray="title.sub_secondary"
     />
     <Scroller :to="'#detail-skills'" />
-    <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
+    <div
+      id="detail-skills"
+      class="flex flex-col items-center justify-center h-screen"
+    >
       <Section
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
+        <SectionBody
+          :body="body[0]"
+          :highlights="highlights"
+        />
       </Section>
-      <CardIcon :items="techs"></CardIcon>
+      <CardIcon :items="techs" />
       <Scroller
         class="mt-4 xl:mt-6"
         :to="'#detail-tools'"
@@ -24,17 +30,29 @@
         delay="2200"
       />
     </div>
-    <div id="detail-tools" class="flex flex-col items-center justify-center h-screen">
+    <div
+      id="detail-tools"
+      class="flex flex-col items-center justify-center h-screen"
+    >
       <Section
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <SectionBody :body="body[1]" :highlights="highlights"></SectionBody>
+        <SectionBody
+          :body="body[1]"
+          :highlights="highlights"
+        />
       </Section>
-      <CardIcon :items="tools"></CardIcon>
-      <NavGuide :to="'/projects'" :position="''" delay="2300">projects</NavGuide>
+      <CardIcon :items="tools" />
+      <NavGuide
+        :to="'/projects'"
+        :position="''"
+        delay="2300"
+      >
+        projects
+      </NavGuide>
     </div>
   </div>
 </template>

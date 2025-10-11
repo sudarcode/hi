@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <div class="flex flex-col" v-if="!isLoading">
-      <Content></Content>
-      <Navbar></Navbar>
-      <Footer></Footer>
+    <div
+      v-if="!isLoading"
+      class="flex flex-col"
+    >
+      <Content />
+      <Navbar />
+      <Footer />
     </div>
   </div>
 </template>
