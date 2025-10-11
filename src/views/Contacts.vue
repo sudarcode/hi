@@ -2,19 +2,25 @@
   <div class="text-gray-300">
     <SectionTitle
       :title="title.text"
-      :subYellow="title.sub_primary"
-      :subGray="title.sub_secondary"
+      :sub-yellow="title.sub_primary"
+      :sub-gray="title.sub_secondary"
     />
     <Scroller :to="'#detail-contacts'" />
-    <div id="detail-contacts" class="flex items-center justify-center h-screen">
+    <div
+      id="detail-contacts"
+      class="flex items-center justify-center h-screen"
+    >
       <Section
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <SectionBody :body="body[0]"></SectionBody>
-        <ButtonEmail v-if="buttons.length > 0" :text="buttons[0].text"></ButtonEmail>
+        <SectionBody :body="body[0]" />
+        <ButtonEmail
+          v-if="buttons.length > 0"
+          :text="buttons[0].text"
+        />
       </Section>
     </div>
   </div>

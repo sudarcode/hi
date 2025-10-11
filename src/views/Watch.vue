@@ -1,9 +1,15 @@
 <template>
   <div class="text-gray-300">
-
     <div class="flex flex-col items-center justify-center h-screen">
-      <div data-aos="fade" data-aos-duration="1000" class="flex flex-col items-center">
-        <Glitch :text="currentTime" size="large" />
+      <div
+        data-aos="fade"
+        data-aos-duration="1000"
+        class="flex flex-col items-center"
+      >
+        <Glitch
+          :text="currentTime"
+          size="large"
+        />
       </div>
     </div>
   </div>
@@ -28,14 +34,6 @@ export default {
       currentTime: ''
     }
   },
-  methods: {
-    updateTime() {
-      const now = new Date()
-      const hours = String(now.getHours()).padStart(2, '0')
-      const minutes = String(now.getMinutes()).padStart(2, '0')
-      this.currentTime = `${hours}:${minutes}`
-    }
-  },
   mounted() {
     window.scrollTo(0, 0);
     this.updateTime() // update pertama kali
@@ -43,6 +41,14 @@ export default {
   },
   beforeUnmount() {
     clearInterval(this.timer) // bersihin biar ga memory leak
+  },
+  methods: {
+    updateTime() {
+      const now = new Date()
+      const hours = String(now.getHours()).padStart(2, '0')
+      const minutes = String(now.getMinutes()).padStart(2, '0')
+      this.currentTime = `${hours}:${minutes}`
+    }
   }
 };
 </script>

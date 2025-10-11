@@ -2,8 +2,8 @@
   <div>
     <SectionTitle
       :title="title.text"
-      :subYellow="title.sub_primary"
-      :subGray="title.sub_secondary"
+      :sub-yellow="title.sub_primary"
+      :sub-gray="title.sub_secondary"
     />
     <Scroller :to="'#detail-projects'" />
     <div
@@ -14,17 +14,27 @@
         <div
           class="grid grid-cols-1 gap-6 mb-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-2 xl:grid-cols-3"
         >
-          <div v-for="(project, index) in projects" :key="index" class>
+          <div
+            v-for="(project, index) in projects"
+            :key="index"
+            class
+          >
             <CardProject
               data-aos="fade-up"
               data-aos-duration="1000"
               :data-aos-delay="index * 50"
               :img="`./images/projects/${project.img}`"
               :project="project"
-            ></CardProject>
+            />
           </div>
         </div>
-        <NavGuide :to="'/contacts'" :position="''" delay="1000">contacts</NavGuide>
+        <NavGuide
+          :to="'/contacts'"
+          :position="''"
+          delay="1000"
+        >
+          contacts
+        </NavGuide>
       </Section>
     </div>
   </div>

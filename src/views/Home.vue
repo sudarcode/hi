@@ -5,10 +5,16 @@
       data-aos-duration="1000"
       class="flex flex-col items-center justify-center h-90"
     >
-      <Glitch :text="title"></Glitch>
-      <Typer :text="tagline"></Typer>
+      <Glitch :text="title" />
+      <Typer :text="tagline" />
     </div>
-    <NavGuide :to="'/about'" position="absolute" :delay="1000">discover</NavGuide>
+    <NavGuide
+      :to="'/about'"
+      position="absolute"
+      :delay="1000"
+    >
+      discover
+    </NavGuide>
   </div>
 </template>
 

@@ -18,9 +18,12 @@
             :src="`images/logo/rysb-logo-for-${darkMode}.webp`"
             class="h-5"
             alt="RYSB Logo"
-          />
+          >
         </router-link>
-        <button @click="open = !open" class="block lg:hidden">
+        <button
+          class="block lg:hidden"
+          @click="open = !open"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-6 h-6"
@@ -51,20 +54,24 @@
       class="absolute flex flex-col items-center justify-center w-full h-screen text-xl font-medium transition duration-500 lg:flex animate__animated animate__fadeIn lg:w-auto lg:static lg:h-auto lg:flex-row lg:items-center lg:text-sm lg:py-4"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">
-        <li v-for="(menu, index) in menus" :key="index" @click="open = false">
+        <li
+          v-for="(menu, index) in menus"
+          :key="index"
+          @click="open = false"
+        >
           <router-link
             :exact="menu.link == '/' ? true : false"
             :to="menu.link"
             class="block px-6 py-5 text-2xl font-medium text-center text-gray-500 transition duration-300 dark:text-gray-400 focus:bg-transparent lg:py-2 lg:text-sm hover:text-gray-700 dark:hover:text-gray-300"
           >
-            {{ menu.name }}</router-link
-          >
+            {{ menu.name }}
+          </router-link>
         </li>
         <li>
           <button
-            @click="toogleDarkMode"
             aria-label="ToggleMode"
             class="flex items-center justify-center w-full px-6 py-5 text-2xl font-normal text-gray-500 transition duration-300 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-yellow-300 lg:py-2 lg:text-sm lg:font-light"
+            @click="toogleDarkMode"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,9 +90,7 @@
                 d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
               />
             </svg>
-            <span class="text-sm font-light lg:hidden"
-              >{{ darkMode === 'dark' ? 'light' : 'dark' }} mode</span
-            >
+            <span class="text-sm font-light lg:hidden">{{ darkMode === 'dark' ? 'light' : 'dark' }} mode</span>
           </button>
         </li>
       </ul>

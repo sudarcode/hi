@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import router from './router'
 
 library.add(faCloudDownloadAlt, faFacebook, faTwitter, faGithub, faLinkedin, faInstagram, faYoutube, faHeart, faPhp, faJs, faLaravel, faVuejs)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('FontAwesomeIcon', FontAwesomeIcon)
 
 Vue.use(VueMeta)
 Vue.use(VueTyperPlugin)
@@ -28,8 +28,8 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App),
   mounted() {
     AOS.init()
   },
+  render: h => h(App),
 }).$mount('#app')
