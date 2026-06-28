@@ -1,1 +1,1 @@
-module.exports = { lintOnSave: 'warning' } // atau false kalau mau matiin sementara
+module.exports = { lintOnSave: 'false' } // atau false kalau mau matiin sementara
